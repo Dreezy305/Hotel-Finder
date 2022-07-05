@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { FONTS } from "./constants/theme";
 // Screens
 import Welcome from "./screens/Welcome";
+import Auth from "./screens/Auth";
 
 const Stack: any = createNativeStackNavigator();
 
@@ -20,6 +21,11 @@ export default function App() {
         <Stack.Screen
           name="Welcome"
           component={Welcome}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Auth"
+          component={Auth}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

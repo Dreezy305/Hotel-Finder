@@ -1,12 +1,17 @@
-import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import React, { useEffect } from "react";
+import { StyleSheet, View, SafeAreaView, Image } from "react-native";
 import { SIZES, COLORS } from "../constants/theme";
-// import HotelIt from "../assets/icons/HotelIt.svg";
+import { hotel_It } from "../constants/image";
 
-function Welcome() {
+function Welcome({ navigation }: any) {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate("Auth");
+    }, 5000);
+  }, []);
   return (
     <SafeAreaView style={{ ...styles.container }}>
-      <View style={{ ...styles.container }}></View>
+      <Image source={hotel_It} resizeMethod="scale" resizeMode="contain" />
     </SafeAreaView>
   );
 }
@@ -18,6 +23,9 @@ const styles = StyleSheet.create({
     flex: 1,
     width: SIZES.width,
     backgroundColor: COLORS.green,
+    justifyContent: "center",
+    alignContent: "center",
+    alignItems: "center",
   },
   content: {
     fontFamily: "JarkataSana_Bold",

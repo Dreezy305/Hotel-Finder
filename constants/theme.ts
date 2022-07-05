@@ -24,6 +24,7 @@ export const SIZES = {
 
 export const COLORS = {
   green: "#109A27",
+  white: "#ffffff",
 };
 
 export const FONTS = {
