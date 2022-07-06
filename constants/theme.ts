@@ -28,18 +28,18 @@ export const COLORS = {
 };
 
 export const FONTS = {
-  JarkataSana_Bold: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Bold.ttf"),
-  JarkataSana_BoldItalic: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-BoldItalic.ttf"),
-  JarkataSana_ExtraBold: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraBold.ttf"),
-  JarkataSana_ExtraBoldItalic: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraBoldItalic.ttf"),
-  JarkataSana_ExtraLight: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraLight.ttf"),
-  JarkataSana_Italic: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Italic.ttf"),
-  JarkataSana_Light: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-LightItalic.ttf"),
-  JarkataSana_Medium: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Medium.ttf"),
-  JarkataSana_MediumItalic: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-MediumItalic.ttf"),
-  JarkataSana_Regular: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf"),
-  JarkataSana_SemiBold: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBold.ttf"),
-  JarkataSana_SemiBoldItalic: require("../assets/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBoldItalic.ttf"),
+  JarkataSana_Bold: require("../assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Bold.ttf"),
+  JarkataSana_BoldItalic: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-BoldItalic.ttf"),
+  JarkataSana_ExtraBold: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraBold.ttf"),
+  JarkataSana_ExtraBoldItalic: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraBoldItalic.ttf"),
+  JarkataSana_ExtraLight: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraLight.ttf"),
+  JarkataSana_Italic: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Italic.ttf"),
+  JarkataSana_Light: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-LightItalic.ttf"),
+  JarkataSana_Medium: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Medium.ttf"),
+  JarkataSana_MediumItalic: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-MediumItalic.ttf"),
+  JarkataSana_Regular: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf"),
+  JarkataSana_SemiBold: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBold.ttf"),
+  JarkataSana_SemiBoldItalic: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBoldItalic.ttf"),
 };
 
 export const FontStyles = { normal: "normal", italic: "italic" };
