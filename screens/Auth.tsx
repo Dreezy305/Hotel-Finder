@@ -1,9 +1,21 @@
-import React from "react";
-import { View, StyleSheet, SafeAreaView, Text, Image } from "react-native";
+import React, { useState } from "react";
+import {
+  View,
+  StyleSheet,
+  SafeAreaView,
+  Text,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import { hotel_green } from "../constants/image";
 import { SIZES, COLORS } from "../constants/theme";
+// components
+import Signup from "./Signup";
+import Login from "./Login";
 
 function Auth() {
+  const [active, setActive] = useState("SIGN_UP");
+
   return (
     <SafeAreaView style={{ ...styles.container }}>
       <View style={{ ...styles.imageContainer }}>
@@ -11,11 +23,42 @@ function Auth() {
       </View>
       <View style={{ ...styles.cardOne }}>
         <View style={{ ...styles.cardOneInner }}>
-          <Text>hello</Text>
-          <Text>hello</Text>
+          <TouchableOpacity style={{ position: "relative" }}>
+            <Text
+              style={{
+                ...styles.cardOneInnerText,
+                position: "absolute",
+                left: 70,
+                color: `${
+                  active === "SIGN_IN" ? "#ffffff" : "rgba(255, 255, 255, 0.6)"
+                }`,
+              }}
+              onPress={() => setActive("SIGN_IN")}
+            >
+              SIGN IN
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={{ position: "relative" }}>
+            <Text
+              style={{
+                ...styles.cardOneInnerText,
+                position: "absolute",
+                left: 250,
+                color: `${
+                  active === "SIGN_UP" ? "#ffffff" : "rgba(255, 255, 255, 0.6)"
+                }`,
+              }}
+              onPress={() => setActive("SIGN_UP")}
+            >
+              SIGN UP
+            </Text>
+          </TouchableOpacity>
         </View>
 
-        <View style={{ ...styles.cardTwo }}></View>
+        <View style={{ ...styles.cardTwo }}>
+          {active === "SIGN_UP" ? <Signup /> : <Login />}
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -56,12 +99,20 @@ const styles = StyleSheet.create({
   cardOneInner: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
     textAlign: "center",
     position: "absolute",
-    left: "30%",
+    // left: "30%",
   },
-  cardOneInnerText: {},
+  cardOneInnerText: {
+    fontFamily: "Poppins_Medium",
+    textTransform: "uppercase",
+    textAlign: "center",
+    fontWeight: "500",
+    fontSize: 18,
+    lineHeight: 18,
+    paddingTop: 40,
+  },
   cardTwo: {
     borderTopRightRadius: 28,
     borderTopLeftRadius: 28,
@@ -72,7 +123,7 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
     paddingTop: 50,
-    marginTop: 100,
+    marginTop: 90,
     overflow: "hidden",
     position: "absolute",
   },
