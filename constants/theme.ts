@@ -28,7 +28,7 @@ export const COLORS = {
 };
 
 export const FONTS = {
-  JarkataSana_Bold: require("../assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Bold.ttf"),
+  JarkataSana_Bold: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Bold.ttf"),
   JarkataSana_BoldItalic: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-BoldItalic.ttf"),
   JarkataSana_ExtraBold: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraBold.ttf"),
   JarkataSana_ExtraBoldItalic: require("../assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraBoldItalic.ttf"),
@@ -58,6 +58,23 @@ export const FONTS = {
   Poppins_SemiBoldItalic: require("../assets/fonts/Poppins/Poppins-SemiBoldItalic.ttf"),
   Poppins_Thin: require("../assets/fonts/Poppins/Poppins-Thin.ttf"),
   Poppins_ThinItalic: require("../assets/fonts/Poppins/Poppins-ThinItalic.ttf"),
+  Raleway_Black: require("../assets/fonts/Raleway/static/Raleway-Black.ttf"),
+  Raleway_BlackItalic: require("../assets/fonts/Raleway/static/Raleway-BlackItalic.ttf"),
+  Raleway_Bold: require("../assets/fonts/Raleway/static/Raleway-Bold.ttf"),
+  Raleway_BoldItalic: require("../assets/fonts/Raleway/static/Raleway-BoldItalic.ttf"),
+  Raleway_ExtraBold: require("../assets/fonts/Raleway/static/Raleway-ExtraBold.ttf"),
+  Raleway_ExtraLight: require("../assets/fonts/Raleway/static/Raleway-ExtraLight.ttf"),
+  Raleway_ExtraLightItalic: require("../assets/fonts/Raleway/static/Raleway-ExtraLightItalic.ttf"),
+  Raleway_Italic: require("../assets/fonts/Raleway/static/Raleway-Italic.ttf"),
+  Raleway_Light: require("../assets/fonts/Raleway/static/Raleway-Light.ttf"),
+  Raleway_LightItalic: require("../assets/fonts/Raleway/static/Raleway-LightItalic.ttf"),
+  Raleway_Medium: require("../assets/fonts/Raleway/static/Raleway-Medium.ttf"),
+  Raleway_MediumItalic: require("../assets/fonts/Raleway/static/Raleway-MediumItalic.ttf"),
+  Raleway_Regular: require("../assets/fonts/Raleway/static/Raleway-Regular.ttf"),
+  Raleway_SemiBold: require("../assets/fonts/Raleway/static/Raleway-SemiBold.ttf"),
+  Raleway_SemiBoldItalic: require("../assets/fonts/Raleway/static/Raleway-SemiBoldItalic.ttf"),
+  Raleway_Thin: require("../assets/fonts/Raleway/static/Raleway-Thin.ttf"),
+  Raleway_ThinItalic: require("../assets/fonts/Raleway/static/Raleway-ThinItalic.ttf"),
 };
 
 export const FontStyles = { normal: "normal", italic: "italic" };
