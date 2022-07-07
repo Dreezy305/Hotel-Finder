@@ -6,6 +6,7 @@ import {
   Text,
   Image,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import { hotel_green } from "../constants/image";
 import { SIZES, COLORS } from "../constants/theme";
@@ -56,9 +57,9 @@ function Auth() {
           </TouchableOpacity>
         </View>
 
-        <View style={{ ...styles.cardTwo }}>
+        <ScrollView style={{ ...styles.cardTwo }}>
           {active === "SIGN_UP" ? <Signup /> : <Login />}
-        </View>
+        </ScrollView>
       </View>
     </SafeAreaView>
   );

@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { View, StyleSheet, Text, ScrollView, TextInput } from "react-native";
 
 function Signup() {
-  const [username, setUsername] = useState<string>("");
+  const [firstname, setFirstname] = useState<string>("");
+  const [lastname, setLastname] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   return (
     <View style={{ ...styles.container }}>
@@ -12,8 +14,28 @@ function Signup() {
         <TextInput
           placeholder=""
           keyboardType="name-phone-pad"
-          value={username}
-          onChangeText={(username) => setUsername(username)}
+          value={firstname}
+          onChangeText={(username) => setFirstname(firstname)}
+          style={{ ...styles.input }}
+        />
+      </View>
+      <View style={{ ...styles.labelInputContainer }}>
+        <Text style={{ ...styles.label }}>Last Name</Text>
+        <TextInput
+          placeholder=""
+          keyboardType="name-phone-pad"
+          value={lastname}
+          onChangeText={(lastname) => setLastname(lastname)}
+          style={{ ...styles.input }}
+        />
+      </View>
+      <View style={{ ...styles.labelInputContainer }}>
+        <Text style={{ ...styles.label }}>Email</Text>
+        <TextInput
+          placeholder=""
+          keyboardType="name-phone-pad"
+          value={email}
+          onChangeText={(email) => setEmail(email)}
           style={{ ...styles.input }}
         />
       </View>
@@ -22,8 +44,8 @@ function Signup() {
         <TextInput
           placeholder=""
           keyboardType="name-phone-pad"
-          value={username}
-          onChangeText={(username) => setUsername(username)}
+          value={password}
+          onChangeText={(password) => setPassword(password)}
           style={{ ...styles.input }}
         />
       </View>
@@ -37,22 +59,22 @@ const styles = StyleSheet.create({
   container: {
     display: "flex",
     flexDirection: "column",
-    // alignItems: "center",
   },
   labelInputContainer: {
     paddingTop: 20,
     paddingHorizontal: 40,
   },
   label: {
-    // fontFamily: "Avenir_Book",
-    fontSize: 19,
-    lineHeight: 19,
-    // color: COLORS.purple,
+    fontFamily: "Poppins_Regular",
+    fontSize: 15,
+    lineHeight: 21,
+    color: "#19235B",
+    fontWeight: "400",
   },
   input: {
     height: 50,
     borderWidth: 2,
-    // borderColor: COLORS.offPurple,
+    borderColor: "#D9DFEB",
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
