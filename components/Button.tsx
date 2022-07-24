@@ -3,21 +3,17 @@ import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { COLORS, FontWeights, TextAlignments } from "../constants/theme";
 
 type buttonProps = {
-  width: string | any;
+  width?: string | any;
+  label?: string;
+  loading?: boolean;
+  onPress?: () => void;
 };
 
-function Button({ width }: buttonProps) {
+function Button({ width, label, onPress }: buttonProps) {
   return (
-    <View style={{ width: width }}>
-      <TouchableOpacity
-        style={styles.signInButton}
-        // onPress={() => {
-        //   navigation.replace("HomeScreen");
-        // }}
-      >
-        <Text style={{ ...styles.buttonText }}>SIGN IN</Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity style={styles.signInButton} onPress={onPress}>
+      <Text style={styles.buttonText}>{label}</Text>
+    </TouchableOpacity>
   );
 }
 
@@ -32,16 +28,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 12,
+    borderRadius: 30,
     marginVertical: 25,
     height: 60,
   },
   buttonText: {
-    padding: 20,
     color: COLORS.white,
-    fontFamily: "Avenir_Book",
-    fontWeight: FontWeights.fw600,
+    fontFamily: "Poppins_Medium",
+    fontWeight: "600",
     fontSize: 16,
-    lineHeight: 19,
+    lineHeight: 24,
+    fontStyle: "normal",
+    textTransform: "uppercase",
   },
 });
