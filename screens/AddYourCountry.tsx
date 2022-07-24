@@ -12,7 +12,11 @@ function AddYourCountry() {
   return (
     <SafeAreaView style={{ ...styles.container }}>
       <View style={{ ...styles.country }}>
-        <Text>Add Your Country</Text>
+        <Text>Complete Your Set Up!</Text>
+        <Text>
+          For the purpose of proper default location search, you are needed to
+          input your country of origin.
+        </Text>
       </View>
     </SafeAreaView>
   );
