@@ -27,6 +27,7 @@ export const COLORS = {
   white: "#ffffff",
   background: "#EEEEEE",
   dark01: "#130F26",
+  grey01: "#696F79",
 };
 
 export const FONTS = {

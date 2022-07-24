@@ -5695,6 +5695,11 @@ react-native-codegen@^0.0.17:
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
 
+react-native-dropdown-select-list@^1.0.18:
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/react-native-dropdown-select-list/-/react-native-dropdown-select-list-1.0.18.tgz#2e178d7659bda25a953f08ab3d2784b2b6d1bd00"
+  integrity sha512-GJBjyxjRw/MGMZAGlONziRkUPKPB5gO/4vBgf9fnsUxNI/ATo6fwfGw187GNSwe8LHjie87wAu6/35iwz6fOdA==
+
 react-native-gradle-plugin@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.6.tgz#b61a9234ad2f61430937911003cddd7e15c72b45"

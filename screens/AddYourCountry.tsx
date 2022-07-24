@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Text,
   SafeAreaView,
@@ -7,16 +7,79 @@ import {
   TextInput,
   ActivityIndicator,
 } from "react-native";
+import SelectList from "react-native-dropdown-select-list";
+import { COLORS } from "../constants/theme";
+import { Countries } from "../data/country";
 
 function AddYourCountry() {
+  const [selected, setSelected] = React.useState("");
+
+  const data = [
+    { key: "1", value: "Jammu & Kashmir" },
+    { key: "2", value: "Gujrat" },
+    { key: "3", value: "Maharashtra" },
+    { key: "4", value: "Goa" },
+  ];
+
   return (
     <SafeAreaView style={{ ...styles.container }}>
       <View style={{ ...styles.country }}>
-        <Text>Complete Your Set Up!</Text>
-        <Text>
+        <Text
+          style={{
+            fontSize: 20,
+            lineHeight: 30,
+            textAlign: "center",
+            paddingBottom: 20,
+            fontFamily: "Raleway_Bold",
+            fontWeight: "700",
+          }}
+        >
+          Complete Your Set Up!
+        </Text>
+        <Text
+          style={{
+            textAlign: "center",
+            width: "90%",
+            fontFamily: "Poppins_Regular",
+            fontSize: 14,
+            lineHeight: 18,
+            fontWeight: "400",
+            paddingBottom: 20,
+          }}
+        >
           For the purpose of proper default location search, you are needed to
           input your country of origin.
         </Text>
+
+        <View
+          style={{
+            marginTop: 30,
+            margin: "auto",
+            display: "flex",
+            alignItems: "flex-start",
+          }}
+        >
+          <Text
+            style={{
+              fontFamily: "Poppins_Regular",
+              color: COLORS.grey01,
+              fontSize: 14,
+              lineHeight: 17,
+              paddingBottom: 5,
+            }}
+          >
+            Country
+          </Text>
+          <SelectList
+            setSelected={setSelected}
+            data={data}
+            boxStyles={{ width: 350, fontFamily: "Poppins_Regular" }}
+            placeholder={"Select Country"}
+            dropdownTextStyles={{ fontFamily: "Poppins_Regular" }}
+            dropdownStyles={{ fontFamily: "Poppins_Regular" }}
+            inputStyles={{ fontFamily: "Poppins_Regular" }}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -35,5 +98,6 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    fontFamily: "Raleway_Bold",
   },
 });
