@@ -3,12 +3,16 @@ import { View, StyleSheet, Text, ScrollView, TextInput } from "react-native";
 import { COLORS } from "../constants/theme";
 import Button from "../components/Button";
 import SocialMedia from "../components/SocialMedia";
+import { useNavigation } from "@react-navigation/native";
 
 function Signup() {
+  const navigation: any = useNavigation();
+
   const [firstname, setFirstname] = useState<string>("");
   const [lastname, setLastname] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+
   return (
     <View style={{ ...styles.container }}>
       <View style={{}}></View>
@@ -65,7 +69,10 @@ function Signup() {
         </Text>
       </View>
       <View style={{ ...styles.labelInputContainer, paddingTop: 1 }}>
-        <Button label={"SIGN UP"} />
+        <Button
+          label={"SIGN UP"}
+          onPress={() => navigation.navigate("OtpScreen")}
+        />
       </View>
       <SocialMedia />
     </View>

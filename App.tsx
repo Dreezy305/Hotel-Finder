@@ -5,6 +5,7 @@ import { FONTS } from "./constants/theme";
 // Screens
 import Welcome from "./screens/Welcome";
 import Auth from "./screens/Auth";
+import OtpScreen from "./screens/OtpScreen";
 
 const Stack: any = createNativeStackNavigator();
 
@@ -26,6 +27,11 @@ export default function App() {
         <Stack.Screen
           name="Auth"
           component={Auth}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="OtpScreen"
+          component={OtpScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
