@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { COLORS } from "../constants/theme";
+import { useNavigation } from "@react-navigation/native";
 
 interface otpProps {
   first: string;
@@ -16,7 +17,9 @@ interface otpProps {
   fourth: string;
 }
 
-export default function OtpScreen({ navigation }: any) {
+export default function OtpScreen() {
+  const navigation: any = useNavigation();
+
   const firstInput: any = useRef();
   const secondInput: any = useRef();
   const thirdInput: any = useRef();
@@ -35,7 +38,7 @@ export default function OtpScreen({ navigation }: any) {
     otp.third !== "" &&
     otp.fourth !== ""
   ) {
-    navigation.navigate("DrawerScreen");
+    navigation.navigate("AddYourCountry");
   }
 
   return (
