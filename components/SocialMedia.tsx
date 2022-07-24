@@ -24,7 +24,7 @@ export default SocialMedia;
 
 const styles = StyleSheet.create({
   labelInputContainer: {
-    paddingTop: 20,
+    paddingTop: 5,
     paddingHorizontal: 40,
     marginBottom: 30,
   },

@@ -79,7 +79,7 @@ function Login() {
           <Text style={{ color: COLORS.green }}>Reset here</Text>
         </Text>
       </View>
-      {/* <SocialMedia /> */}
+      <SocialMedia />
     </ScrollView>
   );
 }
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   labelInputContainer: {
-    paddingTop: 20,
+    paddingTop: 15,
     paddingHorizontal: 40,
   },
   label: {
@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins_Regular",
     fontSize: 10,
     lineHeight: 15,
+    paddingBottom: 8,
   },
   altSignIn: {
     fontFamily: "Poppins_Regular",

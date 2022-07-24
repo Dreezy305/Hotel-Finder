@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Text, ScrollView, TextInput } from "react-native";
+import { COLORS } from "../constants/theme";
+import Button from "../components/Button";
+import SocialMedia from "../components/SocialMedia";
 
 function Signup() {
   const [firstname, setFirstname] = useState<string>("");
@@ -39,7 +42,7 @@ function Signup() {
           style={{ ...styles.input }}
         />
       </View>
-      <View style={{ ...styles.labelInputContainer }}>
+      <View style={{ ...styles.labelInputContainer, position: "relative" }}>
         <Text style={{ ...styles.label }}>Password</Text>
         <TextInput
           placeholder=""
@@ -48,7 +51,23 @@ function Signup() {
           onChangeText={(password) => setPassword(password)}
           style={{ ...styles.input }}
         />
+        <Text
+          style={{
+            ...styles.label,
+            color: COLORS.green,
+            position: "absolute",
+            right: 50,
+            bottom: 10,
+          }}
+          onPress={() => console.log("show")}
+        >
+          show
+        </Text>
       </View>
+      <View style={{ ...styles.labelInputContainer, paddingTop: 1 }}>
+        <Button label={"SIGN UP"} />
+      </View>
+      <SocialMedia />
     </View>
   );
 }
@@ -61,7 +80,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   labelInputContainer: {
-    paddingTop: 20,
+    paddingTop: 15,
     paddingHorizontal: 40,
   },
   label: {
