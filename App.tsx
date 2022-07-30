@@ -7,6 +7,7 @@ import Welcome from "./screens/Welcome";
 import Auth from "./screens/Auth";
 import OtpScreen from "./screens/OtpScreen";
 import AddYourCountry from "./screens/AddYourCountry";
+import Success from "./screens/Success";
 
 const Stack: any = createNativeStackNavigator();
 
@@ -38,6 +39,11 @@ export default function App() {
         <Stack.Screen
           name="AddYourCountry"
           component={AddYourCountry}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Success"
+          component={Success}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

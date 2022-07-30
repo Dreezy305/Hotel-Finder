@@ -3,15 +3,37 @@ import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { COLORS, FontWeights, TextAlignments } from "../constants/theme";
 
 type buttonProps = {
-  width?: string | any;
+  width?: any;
   label?: string;
   loading?: boolean;
   onPress?: () => void;
+  marginTop?: any;
+  position?: any;
+  bottom?: any;
+  top?: any;
 };
 
-function Button({ width, label, onPress }: buttonProps) {
+function Button({
+  width,
+  label,
+  onPress,
+  marginTop,
+  position,
+  bottom,
+  top,
+}: buttonProps) {
   return (
-    <TouchableOpacity style={styles.signInButton} onPress={onPress}>
+    <TouchableOpacity
+      style={{
+        ...styles.signInButton,
+        width: width,
+        marginTop: marginTop,
+        position: position,
+        bottom: bottom,
+        top: top,
+      }}
+      onPress={onPress}
+    >
       <Text style={styles.buttonText}>{label}</Text>
     </TouchableOpacity>
   );

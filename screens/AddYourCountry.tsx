@@ -10,8 +10,11 @@ import {
 import SelectList from "react-native-dropdown-select-list";
 import { COLORS } from "../constants/theme";
 import { Countries } from "../data/country";
+import Button from "../components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 function AddYourCountry() {
+  const navigation: any = useNavigation();
   const [selected, setSelected] = React.useState("");
 
   const data = [
@@ -80,6 +83,13 @@ function AddYourCountry() {
             inputStyles={{ fontFamily: "Poppins_Regular" }}
           />
         </View>
+
+        <Button
+          label={"Complete"}
+          onPress={() => navigation.navigate("Success")}
+          width="80%"
+          marginTop={300}
+        />
       </View>
     </SafeAreaView>
   );
@@ -91,6 +101,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
+    // position: "relative",
   },
   country: {
     textAlign: "center",
@@ -99,5 +110,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     fontFamily: "Raleway_Bold",
+    // position: "relative",
   },
 });
