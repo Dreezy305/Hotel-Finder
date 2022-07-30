@@ -4,7 +4,9 @@ import { Text, SafeAreaView, StyleSheet, View, Image } from "react-native";
 function Home() {
   return (
     <SafeAreaView style={{ ...styles.container }}>
-      <View>Home screen</View>
+      <View>
+        <Text>Home screen</Text>
+      </View>
     </SafeAreaView>
   );
 }
