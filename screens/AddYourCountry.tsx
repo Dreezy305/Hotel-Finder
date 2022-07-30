@@ -101,7 +101,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    // position: "relative",
   },
   country: {
     textAlign: "center",
@@ -110,6 +109,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     fontFamily: "Raleway_Bold",
-    // position: "relative",
   },
 });
